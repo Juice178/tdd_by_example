@@ -1,11 +1,6 @@
 package main
 
-import (
-	"fmt"
-)
-
 func main() {
-	fmt.Println("Hello World!")
 }
 
 type Dollar struct {
@@ -13,5 +8,5 @@ type Dollar struct {
 }
 
 func (d *Dollar) Times(multiplier int) {
-	d.amount = 10
+	d.amount *= multiplier
 }
