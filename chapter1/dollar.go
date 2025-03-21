@@ -1,7 +1,4 @@
-package main
-
-func main() {
-}
+package dollar
 
 type Dollar struct {
 	amount int
