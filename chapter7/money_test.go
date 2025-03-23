@@ -21,6 +21,10 @@ func TestEquality(t *testing.T) {
 
 	assert.True((&Franc{5}).Equals(Franc{5}))
 	assert.False((&Franc{5}).Equals(Franc{6}))
+
+	assert.True((&Dollar{5}).Equals(Dollar{5}))
+
+	assert.False((&Franc{5}).Equals(Dollar{5}))
 }
 
 func TestFrancMultiplication(t *testing.T) {
