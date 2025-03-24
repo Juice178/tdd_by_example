@@ -41,7 +41,7 @@ func (d *Franc) Times(multiplier int) Money {
 func (d *Franc) Equals(object any) bool {
 	franc, ok := object.(Franc)
 	if !ok {
-		fmt.Printf("Argument is no type of Dollar")
+		fmt.Printf("Argument is not type of Franc")
 		return false
 	}
 	return d.amount == franc.amount
