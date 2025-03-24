@@ -41,21 +41,21 @@ type Franc struct {
 	currency string
 }
 
-func (d *Franc) Times(multiplier int) Money {
-	return &Franc{d.amount * multiplier, "CHF"}
+func (f *Franc) Times(multiplier int) Money {
+	return &Franc{f.amount * multiplier, "CHF"}
 }
 
-func (d *Franc) Equals(object any) bool {
+func (f *Franc) Equals(object any) bool {
 	franc, ok := object.(Franc)
 	if !ok {
 		fmt.Printf("Argument is not type of Franc")
 		return false
 	}
-	return d.amount == franc.amount
+	return f.amount == franc.amount
 }
 
-func (d *Franc) Currency() string {
-	return d.currency
+func (f *Franc) Currency() string {
+	return f.currency
 }
 
 func newFranc(amount int) Money {
