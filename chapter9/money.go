@@ -63,10 +63,10 @@ func newFranc(amount int) Money {
 }
 
 func GetMoney(currency string, amount int) (Money, error) {
-	if currency == "Dollar" {
+	if currency == "USD" {
 		return newDollar(amount), nil
 	}
-	if currency == "Franc" {
+	if currency == "CHF" {
 		return newFranc(amount), nil
 	}
 	return nil, fmt.Errorf("wrong currency type passed")
